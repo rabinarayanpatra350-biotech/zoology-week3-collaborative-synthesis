@@ -1,0 +1,24 @@
+variable,role,definition
+recording_id,identifier,Unique identifier for one archived recording
+city,site,City in which the recording was made (24 cities)
+biome,site,"Biome band: temperate, tropical or arid"
+"latitude, longitude",site,Decimal degrees; used to compute solar times
+species,taxon,Species label for the recorded bird (30 species)
+body_mass_g,covariate,Body mass in grams; controls the allometric frequency baseline
+noise_db,predictor 1,Modelled road-traffic noise at the site (dB)
+light_radiance,predictor 2,VIIRS night-time radiance (nW/cm2/sr)
+heat_index_c,predictor 3,"Urban heat island intensity, degrees above the rural baseline"
+month,covariate,"Month of recording (3-6, the breeding season)"
+temperature_c,covariate,Air temperature at the site
+equipment,covariate,Recording device class; controls instrument bias
+min_freq_hz,response - signal,Minimum song frequency (Hz)
+dom_freq_hz,response - signal,Dominant song frequency (Hz)
+bandwidth_hz,response - signal,Spectral bandwidth (Hz)
+note_dur_ms,response - signal,Mean note duration (ms)
+syllable_rate,response - signal,Syllables per second
+onset_min,response - timing,Dawn-song onset relative to sunrise (negative = before)
+cessation_min,response - timing,Vocal cessation relative to sunset (positive = after)
+activity_rate,response - effort,Songs per minute; how much the bird sings (NEW in Week 3)
+noise_floor_db,quality,Estimated noise floor of the file; used for quality screening
+low_quality_flag,quality,"Flagged as a low-quality file (retained, not deleted)"
+outlier_flag,quality,Flagged as a suspected equipment artefact
